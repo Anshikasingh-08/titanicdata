@@ -18,8 +18,11 @@ df = pd.DataFrame(dataset)
 
 # x = df.iloc[:, 1:12].values
 # y = df.iloc[:, 0].values
-x = df.iloc[:, [0,2,3,4,5,6,7,8,9,10,11]].values
-y = df.iloc[:, 1].values
+# x = df.iloc[:, [0,2,3,4,5,6,7,8,9,10,11]].values
+# y = df.iloc[:, 1].values
+x = df.drop('Survived')
+y = df['Survived']
+
 
 print(df.isnull().sum())
 
